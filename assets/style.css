@@ -11701,6 +11701,10 @@ html.rd-navbar-fixed-linked .page {
   margin-top: 24px;
   max-width: 750px;
 }
+.icon-modern .fa-phone,
+.contact-info .fa-phone {
+  transform: rotate(90deg);
+}
 
 @media (min-width: 1200px) {
   .rd-navbar-corporate.rd-navbar-static .rd-navbar-collapse-content > * + * {
