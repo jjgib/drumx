@@ -598,7 +598,11 @@ us.</span></p>
           jQuery("#contact_form").validate({
               rules: {
                 name: 'required',
-                phone: 'required',
+                phone: {
+                  required: true,
+                  number: true,
+                  minlength: 10
+                },
                 u_email: {
                     required: true,
                     email: true
