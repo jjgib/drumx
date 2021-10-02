@@ -431,36 +431,36 @@ us.</span></p>
                 <div class="section-lg">
                   <h3 class="wow-outer"><span class="wow slideInDown" style="visibility: hidden; animation-name: none;">Contact Us</span></h3>
                   <!-- RD Mailform-->
-                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" novalidate="novalidate" data-netlify=true> <!---action="bat/rd-mailform.php"--->
+                  <form id="contact_form" name="contact_form" class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" action="" method="post" novalidate="novalidate" data-netlify=true> <!---action="bat/rd-mailform.php"--->
                     <div class="row row-10">
                       <div class="col-md-12 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp" style="visibility: hidden; animation-name: none;">
                           <label class="form-label-outside" for="contact-first-name">Name</label>
-                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-first-name" type="text" name="name" data-constraints="@Required"><span class="form-validation"></span>
+                          <input required class="form-input form-control-has-validation form-control-last-child" id="first-name" type="text" name="name"><span class="form-validation"></span>
                         </div>
                       </div>
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp" style="visibility: hidden; animation-name: none;">
                           <label class="form-label-outside" for="contact-email">E-mail</label>
-                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
+                          <input required class="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="u_email"><span class="form-validation"></span>
                         </div>
                       </div>
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp" style="visibility: hidden; animation-name: none;">
                           <label class="form-label-outside" for="contact-phone">Phone</label>
-                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-phone" type="text" name="phone" data-constraints="@PhoneNumber"><span class="form-validation"></span>
+                          <input required maxlength="10" class="form-input form-control-has-validation form-control-last-child" id="contact-phone" type="text" name="phone"><span class="form-validation"></span>
                         </div>
                       </div>
                       <div class="col-12 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp" style="visibility: hidden; animation-name: none;">
                           <label class="form-label-outside" for="contact-message">Message</label>
-                          <textarea class="form-input form-control-has-validation form-control-last-child" id="contact-message" name="message" data-constraints="@Required"></textarea><span class="form-validation"></span>
+                          <textarea required class="form-input form-control-has-validation form-control-last-child" id="contact-message" name="message"></textarea><span class="form-validation"></span>
                         </div>
                       </div>
                     </div>
                     <div class="group group-middle">
                       <div class="wow-outer">
-                        <button class="button button-primary button-winona wow slideInRight" type="submit" style="visibility: hidden; animation-name: none;"><div class="content-original">Send Message</div><div class="content-dubbed">Send Message</div></button>
+                        <button class="button button-primary button-winona wow slideInRight" type="submit"><div class="content-original">Send Message</div><div class="content-dubbed">Send Message</div></button>
                       </div>
                       
                     </div>
@@ -590,7 +590,23 @@ us.</span></p>
     </div>--->
 
     <script src="assets/core.js"></script>
+    <!---<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>--->
+    <script src="assets/jquery.validate.min.js"></script>
     <script src="assets/script.js"></script>
-
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+          jQuery("#contact_form").validate({
+              rules: {
+                name: 'required',
+                phone: 'required',
+                u_email: {
+                    required: true,
+                    email: true
+                },
+                message: 'required'
+              }
+          });
+        });
+    </script>
 	
 </body></html>
