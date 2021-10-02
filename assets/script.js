@@ -1428,6 +1428,7 @@
 								output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
 								output.addClass("active");
 							}
+							
 						} else {
 							return false;
 						}
@@ -1447,6 +1448,7 @@
 						}
 					},
 					success: function (result) {
+						
 						if (isNoviBuilder)
 							return;
 
@@ -1464,6 +1466,7 @@
 
 						result = result.length === 5 ? result : 'MF255';
 						output.text(msg[result]);
+						
 
 						if (result === "MF000") {
 							if (output.hasClass("snackbars")) {
@@ -1495,7 +1498,7 @@
 				});
 			}
 		}*/
-		
+
 		// lightGallery
 		if (plugins.lightGallery.length) {
 			for (var i = 0; i < plugins.lightGallery.length; i++) {
