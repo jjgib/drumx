@@ -1348,7 +1348,7 @@
 		}*/
 
 		// RD Mailform
-		if (plugins.rdMailForm.length) {
+		/*if (plugins.rdMailForm.length) {
 			var i, j, k,
 					msg = {
 						'MF000': 'Successfully sent!',
@@ -1494,8 +1494,8 @@
 					}
 				});
 			}
-		}
-
+		}*/
+		
 		// lightGallery
 		if (plugins.lightGallery.length) {
 			for (var i = 0; i < plugins.lightGallery.length; i++) {
