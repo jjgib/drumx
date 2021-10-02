@@ -11705,6 +11705,10 @@ html.rd-navbar-fixed-linked .page {
 .contact-info .fa-phone {
   transform: rotate(90deg);
 }
+form .error {
+  color: #dc0000;
+  font-size: 14px;
+}
 
 @media (min-width: 1200px) {
   .rd-navbar-corporate.rd-navbar-static .rd-navbar-collapse-content > * + * {
