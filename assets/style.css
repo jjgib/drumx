@@ -188,6 +188,7 @@ h1,
   word-spacing: -5px;
 }
 
+
 @media (min-width: 576px) {
   h1,
   .heading-1 {
@@ -19107,5 +19108,14 @@ body:not(.lg-from-hash)
 @media (min-width: 1600px) {
   .d3-chart-legend span {
     font-size: 18px;
+  }
+}
+
+.footer-advanced-aside .rights {
+  text-align: right;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .footer-advanced-aside .rights {
+    text-align: center;
   }
 }
